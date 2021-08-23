@@ -1,0 +1,79 @@
+
+/*RECETEO CSS */
+
+*{
+    margin: 0;
+    padding: 0.5%;
+    box-sizing: border-box;
+    list-style: none;
+    text-decoration: none;
+}
+
+body{
+    background-color: rgb(255, 249, 242);
+    
+}
+
+.titulo{
+    text-align: center;
+    background-image: url(./decor.jpg);
+    font-family: 'Cormorant Garamond', serif;
+}
+
+.btnAgregar{
+    background-color: rgb(255, 127, 68);
+    border: solid 1px chocolate;
+    border-radius: 5px;
+    color: white;
+}
+
+.btnAgregar:hover{
+    background-color: rgb(243, 99, 74);
+}
+
+.oculto{
+    display: none;
+}
+
+.tarjeta {
+    background: rgb(250, 208, 195) ;
+}
+
+.darkMode {
+    background-color: rgb(112, 112, 112);
+    filter: invert(100%);
+}
+
+.btn-ocultar{
+    background-color: rgb(255, 127, 68);
+    padding: 0.6%;
+    border: solid 1px chocolate;
+    border-radius: 5px;
+    color: white;
+    margin: none;
+}
+
+.btn-mostrar{
+    padding: 0.6%;
+    background-color: rgb(255, 127, 68);
+    border: solid 1px chocolate;
+    border-radius: 5px;
+    color: white;
+}
+
+.btnApi{
+    background-color: rgb(255, 127, 68);
+    border: solid 1px chocolate;
+    border-radius: 5px;
+    color: white;
+}
+
+.btnApi:hover{
+    color: azure;
+    background-color: rgb(243, 99, 74);
+}
+
+.textSalida{
+    color: chocolate;
+    transition: all;
+}

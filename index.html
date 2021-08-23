@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="./css/style.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300&display=swap" rel="stylesheet">
+  <title>- F&M Decoratione -</title>
+
+</head>
+<!--------------------- CUERPO -------------------------->
+<body>
+ 
+  <div class="container">
+     <!-- titulo -->
+    <h1 class="titulo">- F&M Decoratione -</h1>
+     <!-- subtitulo -->
+    <h3>Menu Productos</h3>
+
+    <div id="darkMode" class="btn btn-secondary">Dark Mode</div>
+    <div id="mostrarMenu" class="btn btn-success btnAgregar">Agregar Productos</div>
+
+    <div id="removerProductos" class="btn btn-danger float-end">Eliminar Todo</div>
+    <div id="menuAgregar" class="oculto m-3">
+      <form id="formularioProductos">
+        <input id="nombre" name="nombre" type="text" autocomplete="off" placeholder="Nombre">
+        <input id="mueble" name="mueble" type="text" autocomplete="off" placeholder="Mueble">
+        <input id="material" name="material" type="text" autocomplete="off" placeholder="Material">
+        <input id="stock"name="stock" type="number" autocomplete="off" placeholder="Stock">
+    
+        <input type="submit" value="Agregar Productos">
+      </form>
+    </div>
+    <button id="btn-hide" class=" btn btn-ocultar">Ocultar listado</button>
+    <button id="btn-show" class=" btn btn-mostrar">Mostrar listado</button>
+    <div id="listado"></div>
+  </div>
+
+  <!-- guardar cambios -->
+  <div id="list" class="container">
+    <div class="row justify-content-center">
+
+    </div>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+  <script src="js/main.js"></script>
+</body>
+
+</html>
