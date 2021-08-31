@@ -16,29 +16,37 @@
 <body>
  
   <div class="container">
-     <!-- titulo -->
-    <h1 class="titulo">- F&M Decoratione -</h1>
-     <!-- subtitulo -->
-    <h3>Menu Productos</h3>
+    <!-- titulo -->
+   <h1 class="titulo">- F&M Decoratione -</h1>
+    <!-- subtitulo -->
+   <h3>Menu Productos</h3>
 
-    <div id="darkMode" class="btn btn-secondary">Dark Mode</div>
-    <div id="mostrarMenu" class="btn btn-success btnAgregar">Agregar Productos</div>
+   <div id="darkMode" class="btn btn-secondary">Dark Mode</div>
+   <div id="mostrarMenu" class="btn btn-success btnAgregar">Agregar Productos</div>
 
-    <div id="removerProductos" class="btn btn-danger float-end">Eliminar Todo</div>
-    <div id="menuAgregar" class="oculto m-3">
-      <form id="formularioProductos">
-        <input id="nombre" name="nombre" type="text" autocomplete="off" placeholder="Nombre">
-        <input id="mueble" name="mueble" type="text" autocomplete="off" placeholder="Mueble">
-        <input id="material" name="material" type="text" autocomplete="off" placeholder="Material">
-        <input id="stock"name="stock" type="number" autocomplete="off" placeholder="Stock">
-    
-        <input type="submit" value="Agregar Productos">
-      </form>
-    </div>
-    <button id="btn-hide" class=" btn btn-ocultar">Ocultar listado</button>
-    <button id="btn-show" class=" btn btn-mostrar">Mostrar listado</button>
-    <div id="listado"></div>
-  </div>
+   <div id="removerProductos" class="btn btn-danger float-end">Eliminar Todo</div>
+   <div id="menuAgregar" class="oculto m-3">
+     <form id="formularioProductos">
+        <input id="codigo" name="codigo" type="text" autocomplete="off" placeholder="codigo"> 
+       <input id="nombre" name="nombre" type="text" autocomplete="off" placeholder="nombre">
+       <input id="mueble" name="mueble" type="text" autocomplete="off" placeholder="Mueble">
+       <input id="material" name="material" type="text" autocomplete="off" placeholder="Material">
+       <input id="stock"name="stock" type="number" autocomplete="off" placeholder="Stock">
+   
+       <input type="submit" value="Agregar Productos">
+     </form>
+   </div>
+   <button id="btn-hide" class=" btn btn-ocultar">Ocultar listado</button>
+   <button id="btn-show" class=" btn btn-mostrar">Mostrar listado</button>
+   <div id="listado"></div>
+ </div>
+
+ <!-- guardar cambios -->
+ <div id="list" class="container">
+   <div class=" botonApi row justify-content-center">
+
+   </div>
+ </div>
 
   <!-- guardar cambios -->
   <div id="list" class="container">

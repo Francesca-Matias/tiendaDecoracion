@@ -1,6 +1,7 @@
 // Ingreso de nuevos productos 
 class Producto {
-    constructor(nombre, mueble, material, stock) {
+    constructor(codigo, nombre, mueble, material, stock) {
+        this.codigo = codigo;
        this.nombre = nombre;
        this.mueble = mueble;
        this.material = material;
@@ -49,12 +50,13 @@ function guardarListado(listadoProductos) {
 function guardarProducto(e) {
     e.preventDefault();
     const formulario = new FormData(e.target);
+    const codigo = formulario.get("codigo");
     const nombre = formulario.get("nombre");
     const mueble = formulario.get("mueble");
     const material = formulario.get("material");
     const stock = formulario.get("stock");
 
-    const producto = new Producto(nombre, mueble, material, stock);
+    const producto = new Producto(codigo, nombre, mueble, material, stock);
 
     if (validarformulario(producto)) {
         
@@ -105,8 +107,8 @@ function armarTarjeta(elemento) {
     const btnEliminar = document.createElement("div");
     btnEliminar.textContent = "Eliminar";
     btnEliminar.classList.add("btn", "btn-danger", "float-end", "m-2");
-    btnEliminar.setAttribute("id", elemento.nombre);
-    btnEliminar.setAttribute("onclick", `eliminarProducto(${elemento.nombre})`);
+    btnEliminar.setAttribute("id", elemento.codigo);
+    btnEliminar.setAttribute("onclick", `eliminarProducto(${elemento.codigo})`);
     tarjeta.appendChild(btnEliminar);
 
     const nombreProducto = document.createElement("h3");
@@ -130,9 +132,9 @@ function armarTarjeta(elemento) {
 }
 
 // eliminar producto especifico
-function eliminarProducto(nombre){
+function eliminarProducto(codigo){
     let listadoProductos = cargarListado();
-    listadoProductos = listadoProductos.filter(producto => producto.nombre != nombre);
+    listadoProductos = listadoProductos.filter(producto => producto.codigo != codigo);
     guardarListado(listadoProductos);
 }
 
@@ -169,7 +171,7 @@ $(document).ready(function () {
         nombre: "F&M Decoratione"
     }
 
-    $("body").prepend('<button id="post" class="btn btnApi m-2">Guardar Cambios</button>');
+    $(".botonApi").prepend('<button id="post" class="btn btn-api m-2">Guardar Cambios</button>');
 
     $("#post").click(() => {
         $.ajax({
@@ -182,4 +184,3 @@ $(document).ready(function () {
         });
     });
 })
-// text-success
